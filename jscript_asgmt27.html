@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    function validate(){
+    	var para_1 = document.getElementById('para');
+    	var name_1 = document.getElementById('box_1');
+    	var name_2 = document.getElementById('box_2');
+    	var name_3 = document.getElementById('box_3');
+    	var name_4 = document.getElementById('box_4');
+
+    	para_1.innerHTML="welcome : "+name_1.value+" "+name_2.value+" My email id is : "+ name_3.value
+    }
+    </script>
+</head>
+<body>
+	<form name="form_registration">
+		<label>First name:</label><input type="text" id="box_1" name="txt_first_name"><br><br>
+		<label>Last name:</label><input type="text" id="box_2" name="txt_last_name"><br><br>
+		<label>Email Id:</label><input type="text" id="box_3" name="txt_email"><br><br>
+		<label>Password:</label><input type="password" id="box_4" name="txt_password"><br><br>
+		<input type="button" value="Sign Up" onClick="validate()">		
+	</form>
+	<p id="para"></p> 
+</body>
+</html>

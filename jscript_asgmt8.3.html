@@ -1,0 +1,30 @@
+<html>
+<!--Create an HTML page with a Drop down containing the names of different cars. When you select a new car, a function is triggered-->
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+<p id="para">Select a new car from the list.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="Audi">Audi
+  <option value="BMW">BMW
+  <option value="Mercedes">Mercedes
+  <option value="Volvo">Volvo
+</select>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("demo").innerHTML = "You selected a new option ";
+    document.getElementById("mySelect").style.display = "none";
+    document.getElementById("para").innerHTML = "" ;
+
+}
+</script>
+</body>
+</html>

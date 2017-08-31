@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    function validate(){
+      var user_name=document.getElementById('txt_first_name').value;
+      var password=document.getElementById('txt_password').value;
+
+      if (user_name=="admin" || password=="admin123") {
+        return true;
+      }
+      else{
+        alert("User Name='admin' Password='admin123' " );
+        return false;
+      }
+     }
+    </script>
+</head>
+<body>
+	<form name="form_registration" method="post" onsubmit="return validate()" action="jscript_rough.html">
+		<label>User name :</label><input type="text" id="txt_first_name" name="txt_first_name" value="">
+        <label>Password :</label><input type="password" id="txt_password" name="txt_password" value="">      
+		<input type="submit" value="Login" >		
+	</form> 
+</body>
+</html>

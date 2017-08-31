@@ -1,0 +1,13 @@
+.customdiv{
+	min-height: 400px;
+	background-color: #11FFD7
+}
+.centering_elements{
+	margin-left: 120px
+}
+label{
+	font-size: 15;
+	font-family: arial;
+	color: red;
+	font-weight: 400
+}

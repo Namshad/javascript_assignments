@@ -1,0 +1,50 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<script src="bootstrap/jquery.min.js"></script>
+ 	<script src="bootstrap/bootstrap.min.js"></script>
+	<script language="JavaScript">
+	function validate()
+{
+	var Graduate=document.getElementById('incomplete_qualification_graduate').checked;
+	var Post_Graduate=document.getElementById('incomplete_qualification_postgraduate').checked;
+     
+     if (Graduate==false && Post_Graduate==false) {
+     	document.getElementById("incomplete_field_qualification").innerHTML="Please choose a qualification";
+     	return false;
+     }
+     else{
+     	document.getElementById("incomplete_field_qualification").innerHTML="";
+     	return true;
+     }
+}
+	</script>
+	<style type="text/css">
+	.customdiv{
+	min-height: 100px;
+	background-color: #11FFD7
+    }
+    label{
+	font-size: 15;
+	font-family: arial;
+	font-weight: 400;
+}
+#incomplete_field_qualification{
+	margin-left: 100px;
+	color: red;
+}
+</style>
+</head>
+<body>
+	<div class="container customdiv">
+	<form name="form_registration">
+	<h4 style="margin-left:110px">Check Box Validation</h4>
+	<label style="margin-right:65px">Qualification:</label>
+	<input type="checkbox" name="checkbox_qualification" value="graduate" id="incomplete_qualification_graduate">Graduate
+    <input type="checkbox" name="checkbox_qualification" value="post_graduate" id="incomplete_qualification_postgraduate">Post Graduate<br>
+    <label id="incomplete_field_qualification"></label><br><br>
+    <input type="button" value="submit" onClick="return validate()" style="margin-left:115px">
+    </form>
+    </div>
+</body>
+</html>

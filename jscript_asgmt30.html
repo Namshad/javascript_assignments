@@ -1,0 +1,98 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="jscript_asgmt30.css">
+	<script src="bootstrap/jquery.min.js"></script>
+ 	<script src="bootstrap/bootstrap.min.js"></script>
+	<script language="JavaScript">
+	function validate()
+	{
+		a=0;
+	
+	  
+
+	  	if (document.form_registration.txt_customer_name.value=="") {
+	  	document.getElementById("name_msg").innerHTML="Enter your name";
+	  	a++;
+	  }
+
+	else{
+		document.getElementById("name_msg").innerHTML="";
+	}
+
+	  if (document.form_registration.txt_area.value=="") {
+	  	document.getElementById("address_msg").innerHTML="Enter Your address";
+	  a++;
+	}
+	else{
+		document.getElementById("address_msg").innerHTML="";
+	}
+
+	if (document.form_registration.txt_EmailId.value=="") {
+	  	document.getElementById("EmailId_msg").innerHTML="Enter a valid email";
+	  a++;
+	}
+
+   if (document.form_registration.txt_password.value=="") {
+	  	document.getElementById("password_msg").innerHTML="Enter your password";
+	  a++;
+	}
+	else{
+		document.getElementById("password_msg").innerHTML="";
+	}
+
+	   if (document.form_registration.txt_confirm_password.value=="") {
+	  	document.getElementById("confirm_password_msg").innerHTML="Re_enter your password";
+	  a++;
+	}
+	else{
+		document.getElementById("confirm_password_msg").innerHTML="";
+	}
+     
+       if (document.form_registration.Mobile_no.value=="") {
+	  	document.getElementById("Mobile_msg").innerHTML="Enter your mobile";
+	  a++;
+	}
+	else{
+		document.getElementById("Mobile_msg").innerHTML="";
+	}
+	if(a>0)
+	{
+		return false;
+	}
+	}
+	</script>
+</head>
+<body>
+	<div class="col-lg-2 "></div>
+	<div class="container col-lg-8 customdiv">
+	<form name="form_registration">
+		<center><h3>Student Registration Form</h3></center>
+		<div class="centering_elements">Name:<input type="text" id="incomplete_field" name="txt_customer_name" style="margin-left:132px;;width:300px"><label id="name_msg"></label>
+		<br><br>
+
+		Personal Address:
+		   <input type="text" name="txt_area" style="margin-left:55px;width:300px" id="incomplete_field_address"><label id="address_msg"></label><br><br>
+
+		EmailId:
+		  <input type="text" id="incomplete_field_EmailId" name="txt_EmailId" style="margin-left:119px;width:300px"><label id="EmailId_msg"></label>
+		  <br><br>
+
+		  	Mobile No.:
+		   <input type="text" name="Mobile_no" value="" style="margin-left:98px;width:300px" id="incomplete_field"><label id="Mobile_msg"></label>
+		   <br><br>
+
+		Password:
+		  <input type="password" id="incomplete_field_psd" name="txt_password" style="margin-left:104px;width:300px"><label id="password_msg"></label>
+		  <br><br>
+
+        Confirm Password:
+		  <input type="password" id="incomplete_field_confirm_psd" name="txt_confirm_password" style="margin-left:50px;width:300px"><label id="confirm_password_msg"></label>
+		  <br><br>		
+
+		   <input type="button" value="Submit Form" onClick="return validate()" style="margin-left:250px">
+		   </div>
+       </form>
+       </div>
+       <div class="col-lg-2 "></div>
+</body>

@@ -1,0 +1,50 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<script src="bootstrap/jquery.min.js"></script>
+ 	<script src="bootstrap/bootstrap.min.js"></script>
+	<script language="JavaScript">
+	function validate()
+	{
+		a=0;
+	if (document.form_registration.radio_gender.value=="") {
+	  	document.getElementById("incomplete_field_gender").innerHTML=("Please Choose Your Gender");
+	  a++;
+	}
+	else{document.getElementById("incomplete_field_gender").innerHTML="";
+    }
+		if(a>0)
+	{
+		return false;
+	}
+}
+	</script>
+	<style type="text/css">
+	.customdiv{
+	min-height: 100px;
+	background-color: #11FFD7
+    }
+    label{
+	font-size: 15;
+	font-family: arial;
+	font-weight: 400;
+}
+#incomplete_field_gender{
+	margin-left: 100px;
+	color: red;
+}
+</style>
+</head>
+<body>
+	<div class="container customdiv">
+	<form name="form_registration">
+	<h4 style="margin-left:110px">Radio Button Validation</h4>
+	<label style="margin-right:65px">Gender:</label>
+	Male<input type="radio" name="radio_gender" value="Male" id="incomplete_gender">
+    Female<input type="radio" name="radio_gender" value="Female" id="incomplete_gender"><br>
+    <label id="incomplete_field_gender"></label><br><br>
+    <input type="button" value="submit" onClick="return validate()" style="margin-left:115px">
+    </form>
+    </div>
+</body>
+</html>

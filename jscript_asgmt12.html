@@ -1,0 +1,25 @@
+<!--Create a JavaScript program to print the value stored in a variable when:
+Declared Globally
+Declared Locally-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>global variable and local variable</title>
+    
+</head>
+<body>
+	<p id="para"></p>
+	<script type="text/javascript">
+    //variables
+    document.getElementById("para").innerHTML="Global";
+        document.getElementById("para").style.fontSize="30px";
+
+    var variables_="apple";//global
+    function printVariables_() {
+    	document.write(variables_+ " inside function <br/>");
+    }
+    printVariables_() ;
+    	document.write(variables_+ " outside function <br/>");
+    	</script>
+</body>
+</html>

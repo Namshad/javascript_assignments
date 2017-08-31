@@ -1,0 +1,101 @@
+<html>
+<head>
+	<script language="JavaScript">
+	function validate()
+	{
+		a=0;
+	
+	  
+
+	  	if (document.form_registration.txt_customer_name.value=="") {
+	  	document.getElementById("name_msg").innerHTML="Please enter your name";
+	  	document.getElementById("incomplete_field").style.border="1px solid red";
+	  	a++;
+	  }
+
+	else{
+		document.getElementById("name_msg").innerHTML="";
+		document.getElementById("incomplete_field").style.border="1px solid grey"
+	}
+
+	  if (document.form_registration.txt_password.value=="") {
+	  	document.getElementById("password_msg").innerHTML="Please Enter Your Password";
+	  	document.getElementById("incomplete_field_psd").style.border="1px solid red"
+	  a++;
+	}
+	else{
+		document.getElementById("password_msg").innerHTML="";
+		document.getElementById("incomplete_field_psd").style.border="1px solid grey"
+	}
+
+	if (document.form_registration.radio_gender.value=="") {
+	  	document.getElementById("incomplete_field_gender").innerHTML=("Please Enter Your Gender");
+	  a++;
+	}
+	if (document.form_registration.txt_area.value=="") {
+	  	alert("Please Enter Your Address");
+	  	document.getElementById("incomplete_field_address").style.border="1px solid red";
+	  a++;
+	}
+	else{
+		document.getElementById("incomplete_field_address").style.border="1px solid grey";
+	}
+	if (document.form_registration.tel_no.value=="") {
+	  	document.getElementById("lbl_msg").innerHTML="Please enter your number";
+	  	document.getElementById("incomplete_field").style.border="1px solid red";
+	  a++;
+	}
+	if (isNaN(document.form_registration.tel_no.value)) {
+		document.getElementById("lbl_msg").innerHTML="only numbers allowed";
+		a++;
+
+	}
+	else{
+		document.getElementById("lbl_msg").innerHTML="";
+	}
+
+	if (document.form_registration.hobbies.value=="") {
+	  	alert("Please Enter Your Hobbies");
+	  	document.getElementById("incomplete_field").style.border="1px solid red";
+	  a++;
+	}
+	if(a>0)
+	{
+		return false;
+	}
+	}
+	</script>
+</head>
+<body>
+	<form name="form_registration">
+		<h2>Customer Registration</h2>
+		<label>Customer Name:</label><input type="text" id="incomplete_field" name="txt_customer_name" style="margin-left:10px;"><label id="name_msg"></label>
+		<br><br>
+
+		<label>Password:</label>
+		  <input type="password" id="incomplete_field_psd" name="txt_password" style="margin-left:50px"><label id="password_msg"></label>
+		  <br><br>
+
+		<label style="margin-right:65px">Gender:</label>
+		       Male<input type="radio" name="radio_gender" value="Male" id="incomplete_gender">
+		       Female<input type="radio" name="radio_gender" value="Female" id="incomplete_gender"><label id="incomplete_field_gender"></label><br><br>
+
+		<label>Address:</label>
+		   <textarea name="txt_area" style="margin-left:55px;width:200px" id="incomplete_field_address"></textarea><br><br>
+
+		<label>Telephone No.:</label>
+		   <input type="text" name="tel_no" value="" style="margin-left:15px" id="incomplete_field"><label id="lbl_msg"></label>
+		   <br><br>
+
+		<label>Hobbies</label>
+		   <select name="hobbies"style="margin-left:60px" id="incomplete_field">
+		   	  <option></option>
+		   	  <option>Playing</option>
+		   	  <option>Reading</option>
+		   	  <option>Swimming</option>
+		   </select>
+		   <br><br>
+		   
+		   <input type="button" value="submit" onClick="return validate()" style="margin-left:115px">
+       </form>
+</body>
